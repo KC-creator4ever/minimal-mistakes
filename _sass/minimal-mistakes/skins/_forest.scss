@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Forest skin (空靈清新森林浴)
+   ========================================================================== */
+
+/* Colors */
+$forest-green: #52b788 !default;
+$moss-green: #74c69d !default;
+$light-sage: #d8f3dc !default;
+$misty-white: #f7fff7 !default;
+$deep-forest: #2d6a4f !default;
+$sky-mist: #95d5b2 !default;
+$earth-brown: #6c584c !default;
+
+$background-color: $misty-white !default;
+$text-color: #1b4332 !default;
+$muted-text-color: mix(#000, $forest-green, 50%) !default;
+$primary-color: $forest-green !default;
+$border-color: mix(#fff, $moss-green, 80%) !default;
+$code-background-color: $light-sage !default;
+$code-background-color-dark: mix(#000, $light-sage, 15%) !default;
+$form-background-color: mix(#fff, $light-sage, 50%) !default;
+$footer-background-color: $moss-green !default;
+$link-color: $deep-forest !default;
+$link-color-hover: $forest-green !default;
+$link-color-visited: mix(#000, $forest-green, 40%) !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $forest-green !default;
+$navicon-link-color-hover: mix(#000, $misty-white, 20%) !default;
+
+/* Accent colors */
+$success-color: $forest-green !default;
+$warning-color: #f4a261 !default;
+$danger-color: #e76f51 !default;
+$info-color: $sky-mist !default;
+
+/* notices */
+$notice-background-mix: 85% !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+.author__urls.social-icons i,
+.author__urls.social-icons .svg-inline--fa {
+  color: inherit;
+}

@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Beach skin (海邊沙灘)
+   ========================================================================== */
+
+/* Colors */
+$sandy-beige: #f4e4c1 !default;
+$warm-sand: #e8d5b7 !default;
+$ocean-blue: #4a90a4 !default;
+$deep-ocean: #2b6777 !default;
+$sunset-coral: #ff8c69 !default;
+$light-foam: #c8e3f0 !default;
+
+$background-color: $sandy-beige !default;
+$text-color: #2c3e50 !default;
+$muted-text-color: mix(#000, $ocean-blue, 60%) !default;
+$primary-color: $ocean-blue !default;
+$border-color: mix(#fff, $warm-sand, 50%) !default;
+$code-background-color: mix(#fff, $warm-sand, 30%) !default;
+$code-background-color-dark: mix(#000, $warm-sand, 10%) !default;
+$form-background-color: mix(#fff, $sandy-beige, 40%) !default;
+$footer-background-color: $ocean-blue !default;
+$link-color: $deep-ocean !default;
+$link-color-hover: $ocean-blue !default;
+$link-color-visited: mix(#000, $ocean-blue, 30%) !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $ocean-blue !default;
+$navicon-link-color-hover: mix(#000, $sandy-beige, 30%) !default;
+
+/* Accent colors */
+$success-color: #52b788 !default;
+$warning-color: $sunset-coral !default;
+$danger-color: #e63946 !default;
+$info-color: $light-foam !default;
+
+/* notices */
+$notice-background-mix: 80% !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+.author__urls.social-icons i,
+.author__urls.social-icons .svg-inline--fa {
+  color: inherit;
+}
