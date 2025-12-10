@@ -15,13 +15,13 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "zh-TW"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Site Title"
+title                    : "海邊獨行者"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+subtitle                 : "生活雜事觀察、跨界雜學與獨行哲學"
+name                     : "海邊獨行者"
+description              : "極簡的揹包獨行者，用美食將感動保存在肚子和記憶裡。分享生活觀察、跨界雜學與獨行哲學。"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -113,10 +113,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "海邊獨行者"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "我想住海邊，但不管海邊。極簡的揹包獨行者，用美食將感動保存在肚子和記憶裡。當思緒混亂或人生遇難題時，喜歡將腦中的紛亂轉向為讀書的沉靜或新事物的雜學。"
+  location         : "想像中的海邊"
   email            :
   links:
     - label: "Email"
