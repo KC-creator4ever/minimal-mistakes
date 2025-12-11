@@ -177,6 +177,64 @@ To test the theme, run `bundle exec rake preview` and open your browser at `http
 
 ## Credits
 
+## Photo Organization
+
+This repository includes a date-based photo organization system for managing and displaying photo galleries.
+
+### Directory Structure
+
+Photos are organized in a date-based hierarchy:
+
+```
+assets/images/photos/by-date/
+  └── YYYY/
+      └── MM-DD/
+          └── photo.jpg
+assets/images/photos/thumbnails/by-date/
+  └── YYYY/
+      └── MM-DD/
+          └── photo-th.jpg
+```
+
+### Adding New Photos
+
+1. **Organize photos by date**: Place your photos in the appropriate date directory under `assets/images/photos/by-date/YYYY/MM-DD/`
+
+2. **Generate thumbnails**: Run the thumbnail generation script:
+   ```bash
+   python3 scripts/generate_thumbnails.py
+   ```
+   
+   This script will:
+   - Scan all photos in the by-date directory
+   - Generate 300px wide thumbnails (maintaining aspect ratio)
+   - Create/update the metadata file at `data/photos/by-date.json`
+   - Extract EXIF date information when available, or use directory structure dates
+
+3. **View the gallery**: The photo album page is available at `/photos/date-album/` and is automatically linked in the site navigation.
+
+### Switching Classification Modes
+
+The current implementation uses date-based classification. To implement alternative classification modes (e.g., by location, by tag, by event):
+
+1. Create a new directory structure under `assets/images/photos/` (e.g., `by-location/`)
+2. Create a similar script to generate thumbnails and metadata
+3. Create a new gallery page (e.g., `photos/location-album.md`)
+4. Update `_data/navigation.yml` to link to the new gallery
+5. The metadata JSON files in `data/photos/` can coexist for multiple classification modes
+
+### Technical Details
+
+- **Thumbnails**: 300px wide JPEG images with 85% quality
+- **Metadata**: JSON file at `data/photos/by-date.json` contains paths, titles, dates, and thumbnail locations
+- **Gallery Page**: Uses Jekyll Liquid templating to group photos by year and month
+- **EXIF Support**: Automatically extracts dates from photo EXIF data when available
+- **Fallback Dates**: Uses directory structure (YYYY/MM-DD) or file modification time when EXIF is not available
+
+---
+
+## Credits
+
 ### Creator
 
 **Michael Rose**

@@ -1,0 +1,127 @@
+{
+  "photos": [
+    {
+      "title": "Unsplash Image 11",
+      "filename": "unsplash-image-11.jpg",
+      "path": "/assets/images/photos/by-date/2024/09-03/unsplash-image-11.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/09-03/unsplash-image-11-th.jpg",
+      "date": "2024-09-03",
+      "year": "2024",
+      "month": "09",
+      "month_name": "September",
+      "day": "03"
+    },
+    {
+      "title": "Unsplash Image 10",
+      "filename": "unsplash-image-10.jpg",
+      "path": "/assets/images/photos/by-date/2024/08-20/unsplash-image-10.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/08-20/unsplash-image-10-th.jpg",
+      "date": "2024-08-20",
+      "year": "2024",
+      "month": "08",
+      "month_name": "August",
+      "day": "20"
+    },
+    {
+      "title": "Unsplash Image 9",
+      "filename": "unsplash-image-9.jpg",
+      "path": "/assets/images/photos/by-date/2024/07-12/unsplash-image-9.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/07-12/unsplash-image-9-th.jpg",
+      "date": "2024-07-12",
+      "year": "2024",
+      "month": "07",
+      "month_name": "July",
+      "day": "12"
+    },
+    {
+      "title": "Unsplash Image 8",
+      "filename": "unsplash-image-8.jpg",
+      "path": "/assets/images/photos/by-date/2024/06-05/unsplash-image-8.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/06-05/unsplash-image-8-th.jpg",
+      "date": "2024-06-05",
+      "year": "2024",
+      "month": "06",
+      "month_name": "June",
+      "day": "05"
+    },
+    {
+      "title": "Unsplash Image 7",
+      "filename": "unsplash-image-7.jpg",
+      "path": "/assets/images/photos/by-date/2024/05-17/unsplash-image-7.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/05-17/unsplash-image-7-th.jpg",
+      "date": "2024-05-17",
+      "year": "2024",
+      "month": "05",
+      "month_name": "May",
+      "day": "17"
+    },
+    {
+      "title": "Unsplash Image 6",
+      "filename": "unsplash-image-6.jpg",
+      "path": "/assets/images/photos/by-date/2024/04-08/unsplash-image-6.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/04-08/unsplash-image-6-th.jpg",
+      "date": "2024-04-08",
+      "year": "2024",
+      "month": "04",
+      "month_name": "April",
+      "day": "08"
+    },
+    {
+      "title": "Unsplash Image 5",
+      "filename": "unsplash-image-5.jpg",
+      "path": "/assets/images/photos/by-date/2024/03-25/unsplash-image-5.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/03-25/unsplash-image-5-th.jpg",
+      "date": "2024-03-25",
+      "year": "2024",
+      "month": "03",
+      "month_name": "March",
+      "day": "25"
+    },
+    {
+      "title": "Unsplash Image 4",
+      "filename": "unsplash-image-4.jpg",
+      "path": "/assets/images/photos/by-date/2024/03-10/unsplash-image-4.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/03-10/unsplash-image-4-th.jpg",
+      "date": "2024-03-10",
+      "year": "2024",
+      "month": "03",
+      "month_name": "March",
+      "day": "10"
+    },
+    {
+      "title": "Unsplash Image 3",
+      "filename": "unsplash-image-3.jpg",
+      "path": "/assets/images/photos/by-date/2024/02-14/unsplash-image-3.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/02-14/unsplash-image-3-th.jpg",
+      "date": "2024-02-14",
+      "year": "2024",
+      "month": "02",
+      "month_name": "February",
+      "day": "14"
+    },
+    {
+      "title": "Unsplash Image 2",
+      "filename": "unsplash-image-2.jpg",
+      "path": "/assets/images/photos/by-date/2024/01-22/unsplash-image-2.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/01-22/unsplash-image-2-th.jpg",
+      "date": "2024-01-22",
+      "year": "2024",
+      "month": "01",
+      "month_name": "January",
+      "day": "22"
+    },
+    {
+      "title": "Unsplash Image 1",
+      "filename": "unsplash-image-1.jpg",
+      "path": "/assets/images/photos/by-date/2024/01-15/unsplash-image-1.jpg",
+      "thumbnail": "/assets/images/photos/thumbnails/by-date/2024/01-15/unsplash-image-1-th.jpg",
+      "date": "2024-01-15",
+      "year": "2024",
+      "month": "01",
+      "month_name": "January",
+      "day": "15"
+    }
+  ],
+  "generated_at": "2025-12-11T15:13:17.474659",
+  "total_count": 11
+}
