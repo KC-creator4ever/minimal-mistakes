@@ -17,6 +17,10 @@ import argparse
 import re
 from datetime import datetime
 
+# Constants
+MIN_VALID_YEAR = 1900
+MAX_VALID_YEAR = 2100
+
 def slugify(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower())
 
@@ -32,8 +36,8 @@ def parse_date_from_filename(name):
     if m:
         try:
             date = datetime.strptime(m.group(1), "%Y%m%d").date()
-            # Validate reasonable year range (1900-2100)
-            if 1900 <= date.year <= 2100:
+            # Validate reasonable year range
+            if MIN_VALID_YEAR <= date.year <= MAX_VALID_YEAR:
                 return date.isoformat()
         except Exception:
             pass
@@ -78,8 +82,8 @@ def build_album_index(dst_base, album_id, files, album_title=None):
     for i, fname in enumerate(files):
         title = Path(fname).stem
         date = parse_date_from_filename(title)
-        rel_full = str(Path(dst_base) / "albums" / album_id / fname).replace("\\","/")
-        rel_thumb = str(Path(dst_base) / "thumbnails" / "albums" / album_id / (Path(fname).stem + ".jpg")).replace("\\","/")
+        rel_full = (Path(dst_base) / "albums" / album_id / fname).as_posix()
+        rel_thumb = (Path(dst_base) / "thumbnails" / "albums" / album_id / (Path(fname).stem + ".jpg")).as_posix()
         if i == 0:
             album["cover"] = rel_thumb
         album["photos"].append({
@@ -167,8 +171,8 @@ def main():
         for fname in copied:
             title = Path(fname).stem
             date = parse_date_from_filename(title)
-            rel_full = str(Path(dst) / "by-category" / category / fname).replace("\\","/")
-            rel_thumb = str(Path(dst) / "thumbnails" / "by-category" / category / (Path(fname).stem + ".jpg")).replace("\\","/")
+            rel_full = (Path(dst) / "by-category" / category / fname).as_posix()
+            rel_thumb = (Path(dst) / "thumbnails" / "by-category" / category / (Path(fname).stem + ".jpg")).as_posix()
             cat["photos"].append({
                 "filename": fname,
                 "title": title,

@@ -5,6 +5,11 @@ assign_categories.py
 用法:
   python3 scripts/assign_categories.py --mapping scripts/mapping.yaml --src images --dst assets/images/photos --action copy
 依賴: pyyaml (pip install pyyaml)
+
+注意事項 / Notes:
+- symlink action 使用絕對路徑，可能導致 repository 移動時失效
+- symlink action uses absolute paths which may break when repository is moved
+- 建議使用 copy action 以確保可攜性 / Use copy action for better portability
 """
 import argparse
 import yaml
