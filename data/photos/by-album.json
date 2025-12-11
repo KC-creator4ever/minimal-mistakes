@@ -1,0 +1,67 @@
+{
+  "albums": [
+    {
+      "id": "fu-mountain",
+      "title": "福山步道",
+      "cover": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_1.jpg",
+      "photos": [
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_1.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_1.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_1.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_1.jpg"
+        },
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_2.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_2.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_2.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_2.jpg"
+        },
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_3.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_3.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_3.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_3.jpg"
+        },
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_4.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_4.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_4.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_4.jpg"
+        },
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_5.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_5.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_5.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_5.jpg"
+        },
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_6.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_6.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_6.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_6.jpg"
+        },
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_7.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_7.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_7.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_7.jpg"
+        },
+        {
+          "filename": "LINE_ALBUM_福山步道_251211_8.jpg",
+          "title": "LINE_ALBUM_福山步道_251211_8.jpg",
+          "date": "2025-12-11",
+          "path": "assets/images/photos/albums/fu-mountain/LINE_ALBUM_福山步道_251211_8.jpg",
+          "thumbnail": "assets/images/photos/thumbnails/albums/fu-mountain/LINE_ALBUM_福山步道_251211_8.jpg"
+        }
+      ]
+    }
+  ]
+}
