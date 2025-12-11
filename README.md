@@ -205,7 +205,12 @@ assets/images/photos/thumbnails/by-date/
    python3 scripts/generate_thumbnails.py
    ```
    
-   This script will:
+   Alternatively, if you don't have Python installed, you can use the shell script (requires ImageMagick):
+   ```bash
+   bash scripts/generate_thumbnails.sh
+   ```
+   
+   The Python script is recommended as it:
    - Scan all photos in the by-date directory
    - Generate 300px wide thumbnails (maintaining aspect ratio)
    - Create/update the metadata file at `data/photos/by-date.json`
