@@ -21,21 +21,30 @@ def slugify(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower())
 
 def parse_date_from_filename(name):
+    # Try explicit date formats first
     for fmt in ("%Y%m%d", "%y%m%d", "%Y-%m-%d", "%y-%m-%d"):
         try:
             return datetime.strptime(name, fmt).date().isoformat()
         except Exception:
             pass
+    # Look for 8-digit date (YYYYMMDD)
     m = re.search(r'(\d{8})', name)
     if m:
         try:
-            return datetime.strptime(m.group(1), "%Y%m%d").date().isoformat()
+            date = datetime.strptime(m.group(1), "%Y%m%d").date()
+            # Validate reasonable year range (1900-2100)
+            if 1900 <= date.year <= 2100:
+                return date.isoformat()
         except Exception:
             pass
+    # Look for 6-digit date (YYMMDD) - be more careful
     m2 = re.search(r'(\d{6})', name)
     if m2:
         try:
-            return datetime.strptime(m2.group(1), "%y%m%d").date().isoformat()
+            date = datetime.strptime(m2.group(1), "%y%m%d").date()
+            # Validate the date is reasonable (month 1-12, day 1-31)
+            if 1 <= date.month <= 12 and 1 <= date.day <= 31:
+                return date.isoformat()
         except Exception:
             pass
     return ""
@@ -59,10 +68,10 @@ def make_thumbnail(in_path, out_path, width):
         print(f"Error creating thumbnail for {in_path}: {e}", file=sys.stderr)
         return False
 
-def build_album_index(dst_base, album_id, files):
+def build_album_index(dst_base, album_id, files, album_title=None):
     album = {
         "id": album_id,
-        "title": "福山步道" if album_id == "fu-mountain" else album_id,
+        "title": album_title if album_title else album_id,
         "cover": "",
         "photos": []
     }
@@ -89,6 +98,7 @@ def main():
     parser.add_argument("--dst", required=True, help="destination base (e.g. assets/images/photos)")
     parser.add_argument("--thumb-width", type=int, default=400)
     parser.add_argument("--album-id", help="album id for mode=album")
+    parser.add_argument("--album-title", help="album title for mode=album (defaults to album-id)")
     parser.add_argument("--category", help="category for mode=category")
     args = parser.parse_args()
 
@@ -99,7 +109,7 @@ def main():
     safe_make_dir(thumbs_base)
 
     img_exts = {".jpg",".jpeg",".png",".webp"}
-    files = [p for p in src.iterdir() if p.is_file() and p.suffix.lower() in img_exts]
+    files = sorted([p for p in src.iterdir() if p.is_file() and p.suffix.lower() in img_exts])
 
     if args.mode == "album":
         if not args.album_id:
@@ -117,7 +127,7 @@ def main():
             thumb_out = thumb_dir / (f.stem + ".jpg")
             make_thumbnail(dest, thumb_out, args.thumb_width)
             copied.append(str(dest.name))
-        album = build_album_index(dst, album_id, copied)
+        album = build_album_index(dst, album_id, copied, args.album_title)
         out_data_dir = Path("data/photos")
         safe_make_dir(out_data_dir)
         by_album = []

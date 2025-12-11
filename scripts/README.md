@@ -15,6 +15,7 @@ python3 scripts/generate_thumbnails.py \
   --src images \
   --dst assets/images/photos \
   --album-id fu-mountain \
+  --album-title "福山步道" \
   --thumb-width 400
 ```
 
@@ -48,9 +49,10 @@ python3 scripts/assign_categories.py \
 - PyYAML: `pip install pyyaml`
 
 **Actions:**
-- `copy`: Copy files to category directories
+- `copy`: Copy files to category directories (recommended for portability)
 - `move`: Move files to category directories
 - `symlink`: Create symlinks in category directories
+  - ⚠️ **Warning**: Symlinks use absolute paths and may break when the repository is moved or deployed to different environments. Use `copy` for better portability.
 
 ## Directory Structure
 
@@ -93,6 +95,27 @@ minimal-mistakes/
 3. Run `generate_thumbnails.py` to process photos
 4. Create a markdown page in `photos/` directory with `layout: gallery`
 5. The JSON files in `data/photos/` will be automatically updated
+
+## Gallery Page Front Matter
+
+When creating gallery pages, use the following front matter structure:
+
+```yaml
+---
+layout: gallery
+title: "Gallery Title"
+permalink: /photos/album-name/
+lang: "zh-TW"  # or "en" for English
+gallery:  # Optional: for inline gallery
+  - url: /assets/images/photo1.jpg
+    image_path: /assets/images/photo1-thumb.jpg
+    alt: "Photo 1"
+    title: "Photo 1 Title"
+gallery_layout: "half"  # Optional: "half", "third", or leave blank
+---
+```
+
+**Note**: The `gallery` and `gallery_layout` variables are optional and used for inline galleries. For JSON-based galleries from `data/photos/`, you can use custom includes or JavaScript to render the gallery.
 
 ## Mapping File Format
 
