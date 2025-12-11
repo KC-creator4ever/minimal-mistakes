@@ -7,7 +7,7 @@ set -e
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PHOTOS_DIR="$REPO_ROOT/assets/images/photos/by-date"
 THUMBNAILS_DIR="$REPO_ROOT/assets/images/photos/thumbnails/by-date"
-METADATA_FILE="$REPO_ROOT/data/photos/by-date.json"
+METADATA_FILE="$REPO_ROOT/_data/photos/by-date.json"
 
 echo "Photo Gallery Thumbnail Generator (Shell Script)"
 echo "=================================================="
@@ -61,6 +61,6 @@ done
 echo ""
 echo "✓ Thumbnails generated successfully!"
 echo ""
-echo "Note: Metadata file (data/photos/by-date.json) was NOT updated."
+echo "Note: Metadata file (_data/photos/by-date.json) was NOT updated."
 echo "To generate/update metadata with photo information, please run:"
 echo "  python3 scripts/generate_thumbnails.py"

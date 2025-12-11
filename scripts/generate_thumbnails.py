@@ -20,7 +20,7 @@ from PIL import Image
 REPO_ROOT = Path(__file__).parent.parent
 PHOTOS_DIR = REPO_ROOT / "assets" / "images" / "photos" / "by-date"
 THUMBNAILS_DIR = REPO_ROOT / "assets" / "images" / "photos" / "thumbnails" / "by-date"
-METADATA_FILE = REPO_ROOT / "data" / "photos" / "by-date.json"
+METADATA_FILE = REPO_ROOT / "_data" / "photos" / "by-date.json"
 THUMBNAIL_WIDTH = 300
 
 def get_exif_date(image_path):
@@ -170,7 +170,7 @@ def main():
         print("\n✓ Successfully generated thumbnails and metadata!")
         print("\nNext steps:")
         print("1. Review the generated thumbnails")
-        print("2. Check the metadata file at data/photos/by-date.json")
+        print("2. Check the metadata file at _data/photos/by-date.json")
         print("3. The photo gallery page will use this data to display photos")
         return 0
     else:
