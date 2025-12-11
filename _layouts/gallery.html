@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign album_id = page.album_id %}
+{% assign album_data = site.data.photos.by-album %}
+
+{% for album in album_data.albums %}
+  {% if album.id == album_id %}
+    <div class="photo-gallery">
+      <h1>{{ album.title }}</h1>
+      
+      <div class="gallery-grid">
+        {% for photo in album.photos %}
+          <figure class="gallery-item">
+            <a href="/{{ photo.path }}" title="{{ photo.title }}">
+              <img src="/{{ photo.thumbnail }}" alt="{{ photo.title }}" loading="lazy">
+            </a>
+            <figcaption>
+              <div class="photo-title">{{ photo.title }}</div>
+              {% if photo.date != "" %}
+                <div class="photo-date">{{ photo.date }}</div>
+              {% endif %}
+            </figcaption>
+          </figure>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+<style>
+.photo-gallery h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.gallery-item a {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 0.75rem;
+  background: #f8f8f8;
+  font-size: 0.9rem;
+}
+
+.photo-title {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  word-wrap: break-word;
+}
+
+.photo-date {
+  color: #666;
+  font-size: 0.85rem;
+}
+</style>
